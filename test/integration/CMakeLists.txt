@@ -8,8 +8,7 @@ target_include_directories(${TARGET_NAME}
   PUBLIC ${CMAKE_SOURCE_DIR}/lib/repeater/headers
   PUBLIC ${CMAKE_SOURCE_DIR}/lib/greeter/headers)
 
-target_link_libraries(${TARGET_NAME} PRIVATE greeter)
-target_link_libraries(${TARGET_NAME} PRIVATE repeater)
+target_link_libraries(${TARGET_NAME} PRIVATE helloworld)
 
 add_test(
   NAME ${TARGET_NAME}

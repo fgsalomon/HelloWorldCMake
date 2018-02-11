@@ -1,7 +1,13 @@
 cmake_minimum_required(VERSION 3.2)
 set (CMAKE_CXX_STANDARD 11)
+set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
 project(HelloWorld)
+
+if (CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
+    message("-- Default install prefix. Changing it to ${CMAKE_BINARY_DIR}/release")
+    set (CMAKE_INSTALL_PREFIX "${CMAKE_BINARY_DIR}/release" CACHE PATH "default install path" FORCE )
+endif()
 
 # Appends the cmake/modules path to MAKE_MODULE_PATH variable.
 set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules ${CMAKE_MODULE_PATH})

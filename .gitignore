@@ -1,4 +1,5 @@
 Makefile
 CMakeLists.txt.user
 build/*
+lib/common/headers/version.h
 
